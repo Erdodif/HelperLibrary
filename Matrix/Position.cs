@@ -43,6 +43,14 @@ public struct Position
     {
         return new Position { x = lhs.x - rhs.x, y = lhs.y - rhs.y };
     }
+    public static Position operator +(Position lhs, (int, int) rhs)
+    {
+        return new Position { x = lhs.x + rhs.Item2, y = lhs.y + rhs.Item1 };
+    }
+    public static Position operator -(Position lhs, (int, int) rhs)
+    {
+        return new Position { x = lhs.x - rhs.Item2, y = lhs.y - rhs.Item1 };
+    }
 
     public static Position operator *(Position lhs, int rhs)
     {

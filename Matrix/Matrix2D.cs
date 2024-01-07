@@ -129,7 +129,7 @@ public class Matrix2D<T>
 
     public Matrix2D(int size) : this(size, size) { }
 
-    public Matrix2D(int width,int height,T initValue) : this(width, height)
+    public Matrix2D(int width, int height, T initValue) : this(width, height)
     {
         for (int i = 0; i < map.Length; i++)
         {
