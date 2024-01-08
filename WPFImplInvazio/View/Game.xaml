@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WPFImplInvazio.View.Game"
+             xmlns:vm="View"
+             xmlns:v="clr-namespace:WPFImplInvazio.View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFImplInvazio.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="Start" Command="{Binding StartCommand}"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Pause" Command="{Binding PauseCommand}"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Élet:" Padding="5"/>
+        <Label Grid.Row="0" Grid.Column="3" Content="{Binding Health}" Padding="5"/>
+        <Label Grid.Row="0" Grid.Column="4" Content="Pénz:" Padding="5"/>
+        <Label Grid.Row="0" Grid.Column="5" Content="{Binding Money}" Padding="5"/>
+        <ItemsControl ItemsSource="{Binding Map}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="{Binding Columns}"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <v:Tile DataContext="{Binding}" Grid.Row="{Binding Y}" Grid.Column="{Binding X}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Label Grid.Row="2" Grid.Column="0" Content="Eltelt Idő:"/>
+        <Label Grid.Row="2" Grid.Column="1" Content="{Binding TimePassed}"/>
+    </Grid>
+</UserControl>

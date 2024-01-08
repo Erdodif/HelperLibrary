@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixImplConsole", "Matrix
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameSkeleton", "GameSkeleton\GameSkeleton.csproj", "{E30333B8-8CDA-4DB7-9EF7-8C8095A9A94E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiImplInvazio", "MauiImplInvazio\MauiImplInvazio.csproj", "{4492A83E-2D83-4830-B61F-88F63C14861D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiImplInvazio", "MauiImplInvazio\MauiImplInvazio.csproj", "{4492A83E-2D83-4830-B61F-88F63C14861D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFImplInvazio", "WPFImplInvazio\WPFImplInvazio.csproj", "{588D9FD2-325E-4E17-8613-296604901A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{4492A83E-2D83-4830-B61F-88F63C14861D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4492A83E-2D83-4830-B61F-88F63C14861D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4492A83E-2D83-4830-B61F-88F63C14861D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{588D9FD2-325E-4E17-8613-296604901A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588D9FD2-325E-4E17-8613-296604901A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588D9FD2-325E-4E17-8613-296604901A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588D9FD2-325E-4E17-8613-296604901A3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
